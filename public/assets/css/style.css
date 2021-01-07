@@ -1,0 +1,92 @@
+body{
+    background-color: #2C2F33;
+    overflow: hidden;
+}
+
+.login-card{
+    position: relative;
+    top: 30%;
+    left:10%;
+    width: 50%;
+    background-color: #23272A;
+    min-height: 25%;
+    border-radius: 15px;
+    padding: 10px;
+    color: #99AAB5;
+}
+
+.btn-discord{
+    background-color: #7289DA!important;
+}
+
+.chat-container{
+    height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.username{
+    font-size: 20px;
+}
+xtrasmall{
+    padding-left: 5px;
+    padding-top: 11px;
+    font-size: 10px;
+}
+.messagecontent{
+    position: relative;
+    top: -15px;
+    left: 5px;
+    font-size: 16px;
+    color: white;
+    max-width: 90%;
+}
+.chat-form{
+    height: 10%;
+    padding-left: 20px;
+}
+
+.text-discord{
+    color: #7289DA;
+}
+
+.btn-clear{
+    background-color: transparent;
+    border: none;
+}
+
+.user-card{
+    /*border-bottom: 1px solid #2C2F33;*/
+}
+
+a, a:hover{
+    color: #99AAB5;
+    text-decoration: none;
+}
+.logout{
+    height: 10%;
+    padding-top: 20px;
+}
+.user-container{
+    max-height: 90%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    font-size: 20px;
+}
+
+.online{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: limegreen;
+    z-index: 99999;
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
+
+.user-list{
+    background-color: #23272A;
+}
+.fa-circle{
+    color: #7289DA;
+}
