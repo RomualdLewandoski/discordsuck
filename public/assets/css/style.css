@@ -39,6 +39,7 @@ xtrasmall{
     font-size: 16px;
     color: white;
     max-width: 90%;
+    overflow-wrap: anywhere;
 }
 .chat-form{
     height: 10%;

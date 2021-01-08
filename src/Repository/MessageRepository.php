@@ -28,7 +28,6 @@ class MessageRepository extends ServiceEntityRepository
             ->where('m.id > :offset' )
             ->setParameter('offset', $offset)
             ->orderBy('m.id', 'ASC')
-            ->setMaxResults(20)
             ->getQuery()
             ->getResult();
     }

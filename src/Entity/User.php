@@ -171,14 +171,14 @@ class User implements UserInterface
     public function isOnline(){
         if ($this->getLastSeen() == null){
             return false;
-        }{
+        }else{
             $currentDate = new \DateTime('now');
             $comparaisonDate = $currentDate->modify('-20 seconds');
             return $this->getLastSeen() >= $comparaisonDate ;
         }
         // 9:48:25 => actuellement ($currentDate)
-        //$comparaisonDate = $currentDate - 10 s => 9:48:15
+        //$comparaisonDate = $currentDate - 20 s => 9:48:05
         // $lastLogin >= $comparaison
-        // 9:48:20    >= 9:48:15 => JE SUIS EN LIGNE
+        // 9:48:20    >= 9:48:05 => JE SUIS EN LIGNE
     }
 }

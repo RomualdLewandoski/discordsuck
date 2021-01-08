@@ -73,6 +73,9 @@ class ApiController extends AbstractController
             $em->persist($message);
             $em->flush(); // on insert dans la bdd
             $obj->status = "200";
+            $obj->author = $userEntity->getUsername();
+            $obj->sendAt = $message->getSendAt();
+            $obj->id = $message->getId();
         }
 
         return new JsonResponse($obj);
@@ -92,6 +95,7 @@ class ApiController extends AbstractController
             $tempo->content = $message->getContent();
             $tempo->sendAt = $message->getSendAt();
             $tempo->author = $message->getUser()->getUsername();
+            $tempo->id = $message->getId();
             array_push($arr, $tempo);
         }
         $obj->messages = $arr;
@@ -112,6 +116,8 @@ class ApiController extends AbstractController
             $tempo->content = $message->getContent();
             $tempo->sendAt = $message->getSendAt();
             $tempo->author = $message->getUser()->getUsername();
+            $tempo->id = $message->getId();
+
             array_push($arr, $tempo);
         }
         $obj->messages = $arr;
@@ -129,6 +135,7 @@ class ApiController extends AbstractController
 
         foreach ($messages as $message) {
             $tempo = new stdClass();
+            $tempo->id = $message->getId();
             $tempo->content = $message->getContent();
             $tempo->sendAt = $message->getSendAt();
             $tempo->author = $message->getUser()->getUsername();
